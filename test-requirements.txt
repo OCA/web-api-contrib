@@ -1,0 +1,1 @@
+odoo14-addon-endpoint @ git+https://github.com/OCA/web-api@refs/pull/56/head#subdirectory=setup/endpoint
