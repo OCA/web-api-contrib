@@ -5,7 +5,7 @@
         <field name="model">endpoint.endpoint</field>
         <field name="inherit_id" ref="endpoint.endpoint_endpoint_form_view" />
         <field name="arch" type="xml">
-            <notebook position="inside">
+            <xpath expr="//page[last()]" position="after">
                 <page name="catalog" string="Catalog">
                     <group>
                         <group name="catalog_base_info">
@@ -20,7 +20,7 @@
                         </group>
                     </group>
                 </page>
-            </notebook>
+            </xpath>
         </field>
     </record>
 
