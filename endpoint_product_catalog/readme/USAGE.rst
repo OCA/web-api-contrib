@@ -7,7 +7,7 @@ For example:
 
     prod_data = []
     prod_domain = endpoint.product_assorment_id._get_eval_domain()
-    for product in env["product.product"].search(prod_domain):
+    for product in env["product.product"].search(prod_domain).with_context(lang=endpoint.lang_id.code):
         data = {"id": product.id, "name": product.display_name}
         if endpoint.include_prices:
             data["price"] = product.list_price

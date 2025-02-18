@@ -8,7 +8,10 @@ class EndpointEndpoint(models.Model):
     _inherit = "endpoint.endpoint"
 
     product_assortment_id = fields.Many2one(
-        "ir.filters",
+        comodel_name="ir.filters",
         domain=[("is_assortment", "=", True)],
     )
     include_prices = fields.Boolean()
+    lang_id = fields.Many2one(
+        comodel_name="res.lang",
+    )

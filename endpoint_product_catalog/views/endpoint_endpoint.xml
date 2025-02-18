@@ -17,6 +17,10 @@
                                 name="include_prices"
                                 attrs="{'invisible': [('product_assortment_id', '=', False)]}"
                             />
+                            <field
+                                name="lang_id"
+                                attrs="{'invisible': [('product_assortment_id', '=', False)]}"
+                            />
                         </group>
                     </group>
                 </page>
