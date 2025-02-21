@@ -68,6 +68,11 @@ msgid "Include Prices"
 msgstr ""
 
 #. module: endpoint_product_catalog
+#: model:ir.model.fields,field_description:endpoint_product_catalog.field_endpoint_endpoint__lang_id
+msgid "Lang"
+msgstr ""
+
+#. module: endpoint_product_catalog
 #: model:ir.model.fields,field_description:endpoint_product_catalog.field_endpoint_endpoint____last_update
 #: model:ir.model.fields,field_description:endpoint_product_catalog.field_ir_filters____last_update
 msgid "Last Modified on"
