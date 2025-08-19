@@ -17,13 +17,13 @@ Endpoint Product Catalog
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fweb--api--contrib-lightgray.png?logo=github
-    :target: https://github.com/OCA/web-api-contrib/tree/14.0/endpoint_product_catalog
+    :target: https://github.com/OCA/web-api-contrib/tree/18.0/endpoint_product_catalog
     :alt: OCA/web-api-contrib
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/web-api-contrib-14-0/web-api-contrib-14-0-endpoint_product_catalog
+    :target: https://translation.odoo-community.org/projects/web-api-contrib-18-0/web-api-contrib-18-0-endpoint_product_catalog
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/web-api-contrib&target_branch=14.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/web-api-contrib&target_branch=18.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
@@ -38,22 +38,22 @@ This addon allows configuring an endpoint for product catalogs.
 Usage
 =====
 
-This module by itself contains no business logic, but its configuration can be used to
-create endpoints' code snippets.
+This module by itself contains no business logic, but its configuration
+can be used to create endpoints' code snippets.
 
 For example:
 
-.. code-block:: python
+.. code:: python
 
-    prod_data = []
-    prod_domain = endpoint.product_assorment_id._get_eval_domain()
-    for product in env["product.product"].search(prod_domain).with_context(lang=endpoint.lang_id.code):
-        data = {"id": product.id, "name": product.display_name}
-        if endpoint.include_prices:
-            data["price"] = product.list_price
-        prod_data.append(data)
-    resp = Response(json.dumps(prod_data), content_type="application/json", status=200)
-    result = dict(response=resp)
+   prod_data = []
+   prod_domain = endpoint.product_assorment_id._get_eval_domain()
+   for product in env["product.product"].search(prod_domain).with_context(lang=endpoint.lang_id.code):
+       data = {"id": product.id, "name": product.display_name}
+       if endpoint.include_prices:
+           data["price"] = product.list_price
+       prod_data.append(data)
+   resp = Response(json.dumps(prod_data), content_type="application/json", status=200)
+   result = dict(response=resp)
 
 Bug Tracker
 ===========
@@ -61,7 +61,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/web-api-contrib/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/web-api-contrib/issues/new?body=module:%20endpoint_product_catalog%0Aversion:%2014.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/web-api-contrib/issues/new?body=module:%20endpoint_product_catalog%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -69,19 +69,19 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Camptocamp
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* `Camptocamp SA <https://camptocamp.com>`_:
+-  `Camptocamp SA <https://camptocamp.com>`__:
 
-  * Silvio Gregorini <silvio.gregorini@camptocamp.com>
+   -  Silvio Gregorini <silvio.gregorini@camptocamp.com>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 
@@ -104,6 +104,6 @@ Current `maintainers <https://odoo-community.org/page/maintainer-role>`__:
 
 |maintainer-SilvioC2C| |maintainer-simahawk| 
 
-This module is part of the `OCA/web-api-contrib <https://github.com/OCA/web-api-contrib/tree/14.0/endpoint_product_catalog>`_ project on GitHub.
+This module is part of the `OCA/web-api-contrib <https://github.com/OCA/web-api-contrib/tree/18.0/endpoint_product_catalog>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
