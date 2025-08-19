@@ -1,7 +1,7 @@
 # Copyright 2024 Camptocamp SA
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 
 
 class IrFilters(models.Model):
@@ -20,7 +20,7 @@ class IrFilters(models.Model):
         xmlid = "endpoint.endpoint_endpoint_act_window"
         return dict(
             self.env["ir.actions.act_window"]._for_xml_id(xmlid),
-            name=_("Endpoints"),
+            name=self.env._("Endpoints"),
             domain=[("product_assortment_id", "=", self.id)],
             context=dict(self.env.context, default_product_assortment_id=self.id),
         )

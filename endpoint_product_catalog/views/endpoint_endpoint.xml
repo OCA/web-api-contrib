@@ -14,11 +14,11 @@
                             />
                             <field
                                 name="include_prices"
-                                attrs="{'invisible': [('product_assortment_id', '=', False)]}"
+                                invisible="not product_assortment_id"
                             />
                             <field
                                 name="lang_id"
-                                attrs="{'invisible': [('product_assortment_id', '=', False)]}"
+                                invisible="not product_assortment_id"
                             />
                         </group>
                     </group>
